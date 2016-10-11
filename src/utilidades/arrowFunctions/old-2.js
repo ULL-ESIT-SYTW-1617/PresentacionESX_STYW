@@ -3,12 +3,12 @@ function Person() {
   that.age = 0
 
   setTimeout(function growUp() {
-    that.age++ // this.age es undefined!
+    that.age++
   }, 100)
 }
 
 var p = new Person()
 
 setTimeout(function print() {
-  console.log(p.age) // p vale 0! :(
+  console.log(p.age)
 }, 200)
