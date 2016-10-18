@@ -1,5 +1,5 @@
 const fs = require('fs-promise')
-const gensync = require('./generatorsUtils')
+const gensync = require('../aux/generatorsUtils')
 
 const asyncFunc = gensync(function* () {
   const data = yield fs.readFile('./example.md')
