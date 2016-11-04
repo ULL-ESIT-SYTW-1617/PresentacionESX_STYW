@@ -1,9 +1,9 @@
-import { src } from 'gulp'
+import { exec } from 'child-process-promise'
 
 export async function Test () {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve()
-    }, 300)
+    let stdout
+    stdout = await exec('ls')
+    console.log(stdout)
   })
 }
