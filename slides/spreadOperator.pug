@@ -1,0 +1,14 @@
+section
+  section
+    h2 Operador de Dispersión
+    pre
+      code(data-trim='', data-noescape='').
+        [a, b] = [1, 2]
+        [a, b, ...rest] = [1, 2, 3, 4, 5]
+        {a, b} = {a:1, b:2}
+        {a, b, ...rest} = {a:1, b:2, c:3, d:4}  //ES7
+
+section(data-run-in-terminal='utilidades/spreadOperator/old-1.js')
+section(data-run-in-terminal='utilidades/spreadOperator/new-1.js')
+section(data-run-in-terminal='utilidades/spreadOperator/old-2.js')
+section(data-run-in-terminal='utilidades/spreadOperator/new-2.js')

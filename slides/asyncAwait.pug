@@ -1,0 +1,16 @@
+section
+  section
+    h2 Async y Await
+    pre
+      code(data-trim='', data-noescape='').
+        async function (req, res) {
+          let user = await mongo.findByID(req.user.id)
+          user.money = '10€'
+          await user.save()
+          res.send('Ok!')
+        }
+
+section(data-run-in-terminal='asyncAwait/1. old.js')
+section(data-run-in-terminal='asyncAwait/2. promise.js')
+section(data-run-in-terminal='asyncAwait/3. generators.js')
+section(data-run-in-terminal='asyncAwait/4. asyncAwait.js' data-run-in-terminal-args='--harmony')
