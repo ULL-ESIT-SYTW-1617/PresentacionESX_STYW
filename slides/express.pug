@@ -1,0 +1,17 @@
+section
+  h2 Integración con Express
+  h3 Registrar a un usuario
+    pre
+      code.
+        import { router } from 'express'
+        import { User } from './models'
+        
+        router.post('/users/create', async (req, res) => {
+          let { email, password } = req.body
+          if (await User.find({email})) {
+            return res.status(400).send('Ese correo ya existe')
+          }
+          let user = new User({email, password})
+          await user.save()
+          res.send('Te has registrado correctamente')
+        })

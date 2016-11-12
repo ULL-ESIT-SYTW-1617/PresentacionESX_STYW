@@ -1,11 +1,11 @@
 const express = require('express')
-const revealRunInTerminal = require('reveal-run-in-terminal')
+const revealRunInTerminal = require('../reveal-run-in-terminal')
 
 const app = express();
 
 app.use(revealRunInTerminal({
   publicPath: 'code',
-  commandRegex: /node|babel-node/,
+  commandRegex: /node|babel-node|gulp/,
   log: true
 }));
 
