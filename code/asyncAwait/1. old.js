@@ -1,6 +1,6 @@
 var fs = require('fs')
 
-fs.readFile('example.md', function (data) {
+fs.readFile('README.md', function (data) {
   fs.writeFile('borrame1.md', data, function () {
     fs.writeFile('borrame2.md', data, function () {
       fs.unlink('borrame1.md', function () {

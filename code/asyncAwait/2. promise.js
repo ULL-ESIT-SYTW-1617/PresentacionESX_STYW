@@ -1,6 +1,6 @@
 const fs = require('fs-promise')
 
-fs.readFile('example.md').then(data => {
+fs.readFile('README.md').then(data => {
   let promises = [
     fs.writeFile('borrame1.md', data),
     fs.writeFile('borrame2.md', data)

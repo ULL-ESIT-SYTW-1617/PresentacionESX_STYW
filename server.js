@@ -18,8 +18,6 @@ app.get('/', function (req, res) {
   })
 })
 
-console.log(process.env)
-
 app.use(express.static('node_modules/reveal.js'));
 
 app.listen(8080);

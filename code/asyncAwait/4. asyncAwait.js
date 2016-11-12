@@ -1,7 +1,7 @@
 const fs = require('fs-promise')
 
 async function asyncFunc() {
-  const data = await fs.readFile('example.md')
+  const data = await fs.readFile('README.md')
   await Promise.all([
     fs.writeFile('borrame1.md', data),
     fs.writeFile('borrame2.md', data)
