@@ -1,5 +1,5 @@
 const express = require('express')
-const revealRunInTerminal = require('../reveal-run-in-terminal')
+const revealRunInTerminal = require('reveal-run-in-terminal')
 
 const app = express();
 
