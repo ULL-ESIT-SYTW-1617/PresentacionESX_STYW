@@ -5,7 +5,7 @@ section
       code.
         import { router } from 'express'
         import { User } from './models'
-        
+
         router.post('/users/create', async (req, res) => {
           let { email, password } = req.body
           if (await User.find({email})) {
